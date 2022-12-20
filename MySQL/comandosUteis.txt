@@ -1,0 +1,5 @@
+Alguns comandos super úteis em MySQL:
+
+
+- Comando que mostra os tipos de dados de cada coluna de uma tabela:
+SELECT column_name, data_type FROM information_schema.columns WHERE TABLE_SCHEMA = '[nome do database]' and TABLE_NAME = '[nome da tabela]';
