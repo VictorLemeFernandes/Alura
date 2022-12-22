@@ -1,3 +1,5 @@
+package comandosSQL_no_Java;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,8 +11,7 @@ public class TestaInsercao {
         Connection con = factory.recuperarConexao();
 
         Statement stm = con.createStatement();
-        stm.execute("INSERT INTO produto (NOME, DESCRICAO) VALUES ('MOUSE', 'MOUSE SEM FIO')"
-        , Statement.RETURN_GENERATED_KEYS);
+        stm.execute("INSERT INTO produto (NOME, DESCRICAO) VALUES ('MOUSE', 'MOUSE SEM FIO')", Statement.RETURN_GENERATED_KEYS);
 
         ResultSet rst = stm.getGeneratedKeys();
 

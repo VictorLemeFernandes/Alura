@@ -1,3 +1,5 @@
+package comandosSQL_no_Java;
+
 import java.sql.*;
 
 public class TestaListagem {
