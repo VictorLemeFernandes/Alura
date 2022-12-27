@@ -8,8 +8,8 @@ public class TestaListagem {
        Connection connection = criaConexao.recuperarConexao();
 
         /* Statement faz as consultas SQLs */
-        Statement stm = connection.createStatement();
-        stm.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO"); // retorna um boolean
+        PreparedStatement stm = connection.prepareStatement("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
+        stm.execute(); // retorna um boolean
 
         /* ResultSet faz eu ter acesso aos dados */
         ResultSet rst = stm.getResultSet();

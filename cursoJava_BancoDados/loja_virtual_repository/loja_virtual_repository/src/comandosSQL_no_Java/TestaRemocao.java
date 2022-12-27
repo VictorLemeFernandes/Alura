@@ -1,6 +1,7 @@
 package comandosSQL_no_Java;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -9,8 +10,11 @@ public class TestaRemocao {
         ConnectionFactory factory = new ConnectionFactory();
         Connection conn = factory.recuperarConexao();
 
-        Statement stm = conn.createStatement();
-        stm.execute("DELETE FROM PRODUTO WHERE NOME = 'MOUSE'");
+        PreparedStatement stm = conn.prepareStatement("DELETE FROM PRODUTO WHERE ID > ?");
+
+        stm.setInt(1, 2);
+
+        stm.execute();
 
         int linhasApagadas = stm.getUpdateCount(); // mostra quantas linhas foram modificadas
 
