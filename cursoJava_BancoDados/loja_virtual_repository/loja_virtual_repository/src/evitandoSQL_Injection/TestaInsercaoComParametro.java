@@ -30,9 +30,9 @@ public class TestaInsercaoComParametro {
         stm.setString(1, nome);
         stm.setString(2, descricao);
 
-//        if (nome.equals("Rádio")) {
-//            throw new RuntimeException("Não foi possível adicionar o produto.");
-//        }
+        if (nome.equals("Rádio")) {
+            throw new RuntimeException("Não foi possível adicionar o produto.");
+        }
 
         stm.execute();
 
