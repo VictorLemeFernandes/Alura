@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -40,28 +41,42 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+.apresentacao_conteudo_botoes_subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
 .apresentacao_conteudo_botoes {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 32px;
+    align-items: center;
 }
 
 .apresentacao_conteudo_botoes_botao {
-    background-color: #22D4FD;
-    width: 280px;
-    height: 79;
-    border-radius: 16px;
+    width: 378px;
+    border-radius: 8px;
+    border: 2px solid #22D4FD;
     text-align: center;
     font-size: 24px;
     padding: 21.5px 0;
     text-decoration: none;
-    color: black;
+    color: #F6F6F6;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
 }
 
-span {
-    font-weight: bold;
-    color: #22D4FD;
-    border: 1px solid #22D4FD;
-    padding: 10px;
+.apresentacao_conteudo_botoes_botao:hover {
+    background-color: #272727;
+}
+
+.imagemPerfil {
+    border: 2px solid #22D4FD;
 }
