@@ -6,10 +6,31 @@
 }
 
 body {
-    height: 100vh;
     box-sizing: border-box;
     background-color: #000000;
     color: #F6F6F6;
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho_menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho_menu_link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #22D4FD;
+    text-decoration: none;
+}
+
+.cabecalho_menu_link:hover {
+    color: #F6F6F6;
+    font-size: 25px;
 }
 
 .destaqueTitulo {
@@ -20,7 +41,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10% 15%;
+    padding: 5% 15%;
 }
 
 .apresentacao_conteudo {
@@ -79,4 +100,19 @@ body {
 
 .imagemPerfil {
     border: 2px solid #22D4FD;
+}
+
+.rodape {
+    color: #000000;
+    background-color: #22D4FD;
+    padding: 24px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    position: fixed;
+    
+    /*Mantendo o footer sempre no fim da página. Eh gambiarra? Nao sei...*/
+    bottom: 0;
+    width: 100%;
 }
