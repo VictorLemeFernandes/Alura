@@ -30,7 +30,7 @@ body {
 
 .cabecalho_menu_link:hover {
     color: #F6F6F6;
-    font-size: 25px;
+    transform: scale(1.1);
 }
 
 .destaqueTitulo {
@@ -39,7 +39,7 @@ body {
 
 .apresentacao {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     padding: 5% 15%;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .imagemPerfil {
-    border: 2px solid #22D4FD;
+    border-radius: 25%;
 }
 
 .rodape {
@@ -110,9 +110,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 400;
-    position: fixed;
     
     /*Mantendo o footer sempre no fim da página. Eh gambiarra? Nao sei...*/
     bottom: 0;
-    width: 100%;
 }
