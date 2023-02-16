@@ -29,10 +29,10 @@
 }
 
 .solid {
-    border-top: 3px solid #F6F6F6;
+    border-top: 3px solid var(--corSecundaria);
 }
 
 .dotted {
-    border-top: 3px dotted #F6F6F6;
+    border-top: 3px dotted var(--corSecundaria);
     border-bottom: 0;
 }
