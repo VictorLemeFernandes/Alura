@@ -53,11 +53,11 @@ body {
     align-items: start;
     justify-content: space-between;
     padding: 5% 15%;
+    gap: 82px;
 }
 
 .apresentacao_conteudo {
     width: 50%;
-    height: 482;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -129,4 +129,29 @@ body {
     
     /*Mantendo o footer sempre no fim da página. Eh gambiarra? Nao sei...*/
     bottom: 0;
+}
+
+@media (max-width: 1300px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 5% ;
+    }
+
+    .apresentacao_conteudo {
+        width: auto;
+    }
+
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho_menu {
+        gap: 40px;
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+    }
 }
