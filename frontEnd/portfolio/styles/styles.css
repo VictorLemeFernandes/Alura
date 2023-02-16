@@ -33,7 +33,7 @@ body {
 
 .cabecalho_menu_link {
     font-family: var(--fonteSecundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--corTerciaria);
     text-decoration: none;
@@ -64,24 +64,24 @@ body {
 }
 
 .apresentacao_conteudo_titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fontePrimaria);
 }
 
 .apresentacao_conteudo_subtitulo {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--fontePrimaria);
 }
 
 .apresentacao_conteudo_texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonteSecundaria);
 }
 
 
 .apresentacao_conteudo_botoes_subtitulo {
     font-family: var(--fontePrimaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -98,7 +98,7 @@ body {
     border-radius: 8px;
     border: 2px solid var(--corTerciaria);
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 21.5px 0;
     text-decoration: none;
     color: var(--corSecundaria);
@@ -120,7 +120,7 @@ body {
     padding: 24px;
     text-align: center;
     font-family: var(--fonteSecundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     
     /*Mantendo o footer sempre no fim da página. Eh gambiarra? Nao sei...*/
