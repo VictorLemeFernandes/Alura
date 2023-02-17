@@ -110,7 +110,7 @@ body {
     justify-content: center;
 }
 
-.apresentacao_conteudo_botoes_botao:hover {
+.apresentacao_links_navegacao:hover {
     background-color: var(--corHover);
 }
 
