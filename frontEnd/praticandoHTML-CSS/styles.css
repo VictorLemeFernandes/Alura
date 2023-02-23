@@ -8,7 +8,7 @@
 :root {
     --corPrimariaTextos: #FFFFFF;
     --corSecundariaTextos: #C0C0C0;
-    --corTerciariaTextos: #EC2F46;
+    --corTerciariaTextos: #F9F9F9;
     --corPrimariaBotoes: #167BF7;
     --corFundo: #00030C;
 
@@ -51,6 +51,7 @@ body {
 
 .container__imagem {
     margin: 1.35rem 0 3.35rem 0;
+    width: 50%;
 }
 
 .container__botao {
@@ -78,3 +79,40 @@ body {
 }
 /*----------------------------------------------------------*/
 
+/*----------------------------- segunda section -----------------------------*/
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 3.35rem;
+}
+
+.descricao__titulo {
+    font-size: 3rem;
+    font-family: var(--fontePrimaria);
+    font-weight: 700;
+    color: var(--corPrimariaTextos);
+}
+
+.descricao__texto {
+    font-size: 1rem;
+    font-family: var(--fontePrimaria);
+    font-weight: 400;
+    color: var(--corTerciariaTextos);
+    margin-top: 0.5rem;
+}
+
+/*----------------------------------------------------------*/
+
+/*----------------------------- terceira section -----------------------------*/
+.secundario__botao {
+    display: inline-block;
+    margin: 1rem 0 0 0;
+}
+
+.container__descricao {
+    padding: 2rem;
+}
