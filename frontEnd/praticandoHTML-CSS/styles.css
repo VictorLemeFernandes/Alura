@@ -101,7 +101,7 @@ body {
     font-size: 1rem;
     font-family: var(--fontePrimaria);
     font-weight: 400;
-    color: var(--corTerciariaTextos);
+    color: var(--corSecundariaTextos);
     margin-top: 0.5rem;
 }
 
