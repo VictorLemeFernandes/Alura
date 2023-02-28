@@ -116,3 +116,33 @@ body {
 .container__descricao {
     padding: 2rem;
 }
+
+/*----------------------------- quinta section (itens) -----------------------------*/
+
+.dispositivos {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 0 3.35rem;
+    margin-bottom: 5rem;
+}
+
+.dispositivos__titulo {
+    font-family: var(--fontePrimaria);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--corPrimariaTextos);
+}
+
+.dispositivos__lista {
+    display: flex;
+    gap: 10rem;
+    justify-content: center;
+    list-style-type: none;
+    font-family: var(--fontePrimaria);
+    font-size: 2rem;
+    font-weight: 700;
+    width: auto;
+}
