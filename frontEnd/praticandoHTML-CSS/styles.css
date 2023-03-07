@@ -146,3 +146,41 @@ body {
     font-weight: 700;
     width: auto;
 }
+
+/*----------------------------- footer -----------------------------*/
+.rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 3.35rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.rodape__lista {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.lista__link {
+    text-decoration: none;
+    font-family: var(--fontePrimaria);
+    font-weight: 400;
+    color: var(--corSecundariaTextos);
+}
+
+.rodape__lista a:hover {
+    color: var(--corPrimariaBotoes);
+}
+
+.rodape__lista li:hover {
+    transform: scale(1.08);
+}
+
+.rodape__texto {
+    font-family: var(--fontePrimaria);
+    font-weight: 400;
+    color: var(--corSecundariaTextos);
+    font-size: 0.75rem;
+}
