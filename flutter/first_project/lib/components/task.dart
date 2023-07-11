@@ -2,6 +2,18 @@ import 'package:flutter/material.dart';
 
 import 'difficulty.dart';
 
+int retornaIndice(int nivel, int dificuldade) {
+  int indice = 0;
+
+  if (nivel > dificuldade * 10 && nivel < dificuldade * 20) {
+    return indice + 1;
+  } else if (nivel >= dificuldade * 20 && nivel < dificuldade * 30) {
+    return indice + 2;
+  } else {
+    return indice + 3;
+  }
+}
+
 class Task extends StatefulWidget {
   final String nome;
   final String foto;
@@ -14,7 +26,8 @@ class Task extends StatefulWidget {
 }
 
 class _TaskState extends State<Task> {
-  int nivel = 0;
+  int nivel = 1, controleBarra = 0;
+  Map<int, Color> colors = ({1: Colors.black, 2: Colors.green, 3: Colors.red});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +39,9 @@ class _TaskState extends State<Task> {
           children: [
             // CONTAINER WITH LINEAR PROGRESSION AND LEVEL
             Container(
-              color: Colors.blue,
+              color: (nivel <= widget.dificuldade * 10)
+                  ? Colors.blue
+                  : colors[retornaIndice(nivel, widget.dificuldade)],
               height: 140,
             ),
 
@@ -44,7 +59,7 @@ class _TaskState extends State<Task> {
                         color: Colors.white,
                         width: 72,
                         height: 100,
-                        child: Image.network(
+                        child: Image.asset(
                           widget.foto,
                           fit: BoxFit.cover,
                         ),
@@ -56,7 +71,7 @@ class _TaskState extends State<Task> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           // ACTIVITY NAME
-                          Container(
+                          SizedBox(
                             width: 200,
                             child: Text(
                               widget.nome,
@@ -79,6 +94,11 @@ class _TaskState extends State<Task> {
                         child: ElevatedButton(
                             onPressed: () {
                               setState(() {
+                                if (controleBarra > widget.dificuldade * 10) {
+                                  controleBarra = 0;
+                                } else {
+                                  controleBarra++;
+                                }
                                 nivel++;
                               });
                             },
@@ -104,13 +124,13 @@ class _TaskState extends State<Task> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 8.0),
-                      child: Container(
+                      child: SizedBox(
                         width: 200,
                         child: LinearProgressIndicator(
                           backgroundColor: Colors.white30,
                           color: Colors.white,
                           value: (widget.dificuldade > 0)
-                              ? (nivel / widget.dificuldade) / 10
+                              ? (controleBarra / widget.dificuldade) / 10
                               : 1,
                         ),
                       ),
