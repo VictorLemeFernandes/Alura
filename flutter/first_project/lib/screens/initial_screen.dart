@@ -11,6 +11,8 @@ class InitialScreen extends StatefulWidget {
 class _InitialScreenState extends State<InitialScreen> {
   bool opacity = true;
 
+  bool opacidade = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,26 +21,29 @@ class _InitialScreenState extends State<InitialScreen> {
         backgroundColor: Colors.blue,
         title: const Text('Tarefas'),
       ),
-      body: ListView(
-        children: const [
-          Task(
-              'Aprender Flutter no café da manhã comendo pão',
-              'assets/mascoteFlutter.png',
-              3),
-          Task(
-              'Andar de bicicleta',
-              'assets/bicicleta.jpg',
-              2),
-          Task(
-              'Meditar',
-              'assets/meditar.jpeg',
-              5),
-          SizedBox(
-            height: 80,
-          ),
-        ],
+      body: AnimatedOpacity(
+        opacity: opacidade ? 1 : 0,
+        duration: const Duration(milliseconds: 1000),
+        child: ListView(
+          children: const [
+            Task('Aprender Flutter no café da manhã comendo pão',
+                'assets/mascoteFlutter.png', 3),
+            Task('Andar de bicicleta', 'assets/bicicleta.jpg', 2),
+            Task('Meditar', 'assets/meditar.jpeg', 5),
+            SizedBox(
+              height: 80,
+            ),
+          ],
+        ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {}),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            opacidade = !opacidade;
+          });
+        },
+        child: const Icon(Icons.remove_red_eye),
+      ),
     );
   }
 }

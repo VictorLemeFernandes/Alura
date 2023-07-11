@@ -32,16 +32,22 @@ class _TaskState extends State<Task> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(4),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Stack(
           children: [
             // CONTAINER WITH LINEAR PROGRESSION AND LEVEL
             Container(
-              color: (nivel <= widget.dificuldade * 10)
-                  ? Colors.blue
-                  : colors[retornaIndice(nivel, widget.dificuldade)],
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                color: (nivel <= widget.dificuldade * 10)
+                    ? Colors.blue
+                    : colors[retornaIndice(nivel, widget.dificuldade)],
+              ),
               height: 140,
             ),
 
@@ -56,12 +62,18 @@ class _TaskState extends State<Task> {
                     children: [
                       // CONTAINER WITH ACTIVITY IMAGE
                       Container(
-                        color: Colors.white,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(4),
+                        ),
                         width: 72,
                         height: 100,
-                        child: Image.asset(
-                          widget.foto,
-                          fit: BoxFit.cover,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: Image.asset(
+                            widget.foto,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
 
